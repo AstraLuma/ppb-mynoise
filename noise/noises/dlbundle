@@ -1,0 +1,16 @@
+#!/bin/bash
+
+urlname=${1^^}
+mkdir ${1,,}
+cd ${1,,}
+
+wget -c http://cdn.mynoise.net/Data/$urlname/{0..9}a.ogg http://cdn.mynoise.net/Data/$urlname/{0..9}b.ogg http://cdn.mynoise.net/Data/$urlname/{bg.jpg,demo.ogg}
+
+#echo "Title: ..." > info.mf
+#echo "Category: ..." >> info.mf
+#echo "Tags: ..." >> info.mf
+
+#echo "<description>" > desc.xml
+#echo "</description>" >> desc.xml
+
+touch __init__.py
